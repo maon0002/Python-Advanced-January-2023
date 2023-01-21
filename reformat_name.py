@@ -1,7 +1,7 @@
 import re
 import pyperclip
 
-text = '''          Multidimensional Lists - Exercise 2
+text = '''          07. Square with Maximum Sum
 
 
 
