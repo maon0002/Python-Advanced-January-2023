@@ -13,3 +13,4 @@ for i in range(len(input_line)):
     elif char == ')':
         to_index = i + 1
         print(input_line[indexes.pop():to_index])
+
