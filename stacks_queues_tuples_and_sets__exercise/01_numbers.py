@@ -1,3 +1,38 @@
+first_set = {int(x) for x in input().split()}
+second_set = {int(x) for x in input().split()}
+
+commands_dictionary = {
+    "Add First": lambda x: [first_set.add(y) for y in x],
+    "Add Second": lambda x: [second_set.add(y) for y in x],
+    "Remove First": lambda x: [first_set.discard(y) for y in x],
+    "Remove Second": lambda x: [second_set.discard(y) for y in x],
+    "Check Subset": lambda: print(True) if first_set.issubset(second_set) or second_set.issubset(first_set) else print(False),
+}
+for i in range(int(input())):
+    command = input().split()
+    current_command = command[0] + " " + command[1]
+    values = [int(x) for x in command if x.isdigit()]
+    if current_command in commands_dictionary.keys() and current_command != "Check Subset":
+        commands_dictionary[current_command](values)
+    else:
+        commands_dictionary[current_command]()
+
+print(*sorted(first_set), sep=", ")
+print(*sorted(second_set), sep=", ")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # first = set(int(x) for x in input().split())
 # second = set(int(x) for x in input().split())
 #
