@@ -1,12 +1,28 @@
+from functools import reduce
+from _collections import deque
 
+nums_list = list()
 
+input_line = deque([str(x) for x in input().split()])
+# print(input_line)
 
+operations = {
+    '+': lambda lst: reduce(lambda x, y: x + y if nums_list else None, nums_list),
+    '-': lambda lst: reduce(lambda x, y: x - y if nums_list else None, nums_list),
+    '*': lambda lst: reduce(lambda x, y: x * y if nums_list else None, nums_list),
+    '/': lambda lst: reduce(lambda x, y: x / y if nums_list else None, nums_list),
+}
 
+while input_line:
 
+    current_char = input_line.popleft()
+    if current_char not in '+-*/':
+        nums_list.append(int(current_char))
 
+    else:
+        nums_list = [int(operations[current_char](nums_list))]  # if nums_list else 0.000001
 
-
-
+print(*nums_list)
 
 
 
@@ -36,25 +52,6 @@
 # print(*calc)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # from functools import reduce
 # from math import floor
 #
@@ -80,4 +77,3 @@
 #     idx += 1
 #
 # print(floor(int(expression[0])))
-

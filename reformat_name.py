@@ -1,7 +1,10 @@
 import re
 import pyperclip
 
-text = '''          07. Square with Maximum Sum
+text = '''          11. Math Operations (not included in final score)
+
+
+
 
 
 

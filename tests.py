@@ -1,0 +1,6 @@
+a = (2, 2)
+c = ('a','a')
+print(a)
+b = set(a)
+print(b)
+print(c.count('a'))
