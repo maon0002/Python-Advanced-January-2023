@@ -1,3 +1,31 @@
+sqr_size = int(input())
+matrix = [[int(x) for x in input().split()] for rows in range(sqr_size)]
+# print(matrix)
+primary_diagonal_sum = 0
+for row in range(sqr_size):
+    for col in range(sqr_size):
+        if row == col:
+            num_for_adding = matrix[row][col]
+            primary_diagonal_sum += num_for_adding
+print(primary_diagonal_sum)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # def read_matrix_func():
 #     number_of_rows = int(input())
 #     current_matrix = []

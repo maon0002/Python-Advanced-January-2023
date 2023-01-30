@@ -1,3 +1,24 @@
+rows, cols = [int(x) for x in input().split(", ")]
+matrix = list()
+total_sum = 0
+for row in range(rows):
+    matrix.append([int(n) for n in input().split(", ")])
+
+for row in range(len(matrix)):
+    total_sum += sum(matrix[row])
+print(total_sum)
+print(matrix)
+
+
+
+
+
+
+
+
+
+
+
 # def read_matrix_func(test=False):
 #     if test:
 #         return [

@@ -1,3 +1,22 @@
+# matrix = [[int(y) for y in input().split(", ")] for x in range(int(input()))] + []
+rows = int(input())
+matrix_extended = []
+for n in range(rows):
+    matrix_row = [int(x) for x in input().split(", ")]
+    matrix_extended.extend(matrix_row)
+print(matrix_extended)
+
+
+
+
+
+
+
+
+
+
+
+
 # matrix = [[int(el) for el in input().split(', ')] for _ in range(int(input()))]
 # result = [num for row in matrix for num in row]
 # print(result)

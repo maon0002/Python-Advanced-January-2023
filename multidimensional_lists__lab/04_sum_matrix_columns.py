@@ -1,3 +1,32 @@
+rows, cols = [int(n) for n in input().split(", ")]
+matrix = [[int(i) for i in input().split()] for row in range(rows)]
+
+for col in range(cols):
+    col_total = 0
+    for row in range(rows):
+        col_total += matrix[row][col]
+    print(col_total)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # def read_matrix_func():
 #     number_of_rows, number_of_columns = map(int, input().split(', '))
 #     current_matrix = []

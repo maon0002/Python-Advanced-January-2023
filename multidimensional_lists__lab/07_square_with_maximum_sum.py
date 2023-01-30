@@ -1,3 +1,37 @@
+rows, cols = [int(x) for x in input().split(", ")]
+matrix = [[int(n) for n in input().split(", ")]for r in range(rows)]
+matrix_2x2 = None
+total = 0
+
+for row in range(rows - 1):
+    for col in range(cols - 1):
+        left_top = matrix[row][col]
+        right_top = matrix[row][col + 1]
+        left_bottom = matrix[row + 1][col]
+        right_bottom = matrix[row + 1][col + 1]
+        current_sqr_sum = left_bottom + left_top + right_bottom + right_top
+        if current_sqr_sum > total:
+            total = current_sqr_sum
+            matrix_2x2 = f"{left_top} {right_top}\n{left_bottom} {right_bottom}"
+
+print(matrix_2x2)
+print(total)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # def read_matrix():
 #     data = input().split(', ')
 #     size = int(data[0])
