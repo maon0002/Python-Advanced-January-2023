@@ -1,8 +1,5 @@
 rows, cols = [int(n) for n in input().split()]
-# matrix = [[[]*c for c in range(cols)] for row in range(rows)]
-# matrix = [[[] for c in range(cols)] for row in range(rows)]
 matrix = []
-# [[[], [], [], [], [], []], [[], [], [], [], [], []], [[], [], [], [], [], []], [[], [], [], [], [], []]]
 print(matrix)
 start = ord("a")
 print(start)
@@ -20,4 +17,13 @@ for r in range(rows):
 [[print(*matrix[chars]) for chars in range(cols)] for lines in range(rows)]
 
 print(matrix)
-# [[['aaa'], ['aba']], [['bab'], ['bbb']], [['cac'], ['cbc']]]
+
+# rows, cols = [int(x) for x in input().split()]
+#
+# start_end = ord('a')
+#
+# for row in range(start_end, start_end + rows):
+#     for col in range(start_end, start_end + cols):
+#         print(f"{chr(row)}{chr((row + col) - start_end)}{chr(row)}", end=" ")
+#
+#     print()

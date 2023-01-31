@@ -17,8 +17,11 @@ while range_deque_col and range_deque_row:
 print(f"Primary diagonal: {', '.join(str(x) for x in primary_diagonal)}. Sum: {sum(primary_diagonal)}")
 print(f"Secondary diagonal: {', '.join(str(x) for x in secondary_diagonal)}. Sum: {sum(secondary_diagonal)}")
 
-
-
-# print(abs(sum(primary_diagonal) - sum(secondary_diagonal)))
-
-
+# n = int(input())
+#
+# matrix = [[int(x) for x in input().split(", ")] for _ in range(n)]
+# primary = [matrix[r][r] for r in range(n)]
+# secondary = [matrix[r][n - r - 1] for r in range(n - 1, -1, -1)]
+#
+# print(f"Primary diagonal: {', '.join(str(x) for x in primary)}. Sum: {sum(primary)}")
+# print(f"Secondary diagonal: {', '.join([str(x) for x in secondary][::-1])}. Sum: {sum(secondary)}")
