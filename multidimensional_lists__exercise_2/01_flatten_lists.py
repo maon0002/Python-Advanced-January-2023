@@ -1,15 +1,9 @@
-
-
-
-
-
-
-
-
-
-
-
-
+input_line = [[int(n) if n.isdigit() else n for n in x.split(' ')] for x in input().split("|")[::-1]]
+result = []
+for row in range(len(input_line)):
+    for char in input_line[row]:
+        if char != "":
+            print(int(char), end=' ')
 
 
 

@@ -1,20 +1,21 @@
+rows = int(input())
+matrix = [[int(n) for n in input().split()] for r in range(rows)]
 
+while True:
+    command, *values = input().split()
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    if command == "END":
+        break
+    row = int(values[0])
+    col = int(values[1])
+    new_val = int(values[2])
+    if row not in range(0, len(values) + 1) or col not in range(0, len(values) + 1):
+        print("Invalid coordinates")
+    elif command == "Add":
+        matrix[row][col] += new_val
+    elif command == "Subtract":
+        matrix[row][col] -= new_val
+[print(*matrix[row]) for row in range(rows)]
 
 # size = int(input())  # прочитаме редовете
 # matrix = [[int(n) for n in input().split()] for _ in range(size)]

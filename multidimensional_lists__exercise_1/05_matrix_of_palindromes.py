@@ -1,22 +1,24 @@
 rows, cols = [int(n) for n in input().split()]
-matrix = []
-print(matrix)
+matrix = [[[] for x in range(cols)] for row in range(rows)]
 start = ord("a")
-print(start)
 
 for r in range(rows):
     for c in range(cols):
-        # col_i = 97 + r
-        string = [chr(r + 97) + chr(c + r + 97) + chr(r + 97)]
-        matrix.append(string)
+        string = chr(r + 97) + chr(c + r + 97) + chr(r + 97)
+        matrix[r][c].append(string)
 
-# for r_ in range(rows):
-#     for c_ in range(cols):
-#         print(*matrix[r_][c_], end="\n")
+for _r in range(rows):
+    counter = 0
+    for _c in range(cols):
+        print(*matrix[_r][_c], end=" ")
+        counter += 1
+        if counter == cols:
+            print()
+            break
 
-[[print(*matrix[chars]) for chars in range(cols)] for lines in range(rows)]
+# [[print(chars[cols]) for chars in range(cols)] for lines in range(rows)]
 
-print(matrix)
+# print(matrix)
 
 # rows, cols = [int(x) for x in input().split()]
 #

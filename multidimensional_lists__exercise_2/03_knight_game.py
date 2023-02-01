@@ -1,8 +1,43 @@
+size = int(input())
+matrix = [[ch for ch in input()] for row in range(size)]
+# print(matrix)
+moves =(
+    (-2, 1), #1h
+    (-1, 2),
+    (1, 2),
+    (2, 1),
+    (2, -1),
+    (1, -2),
+    (-1, -2),
+    (-2, -1),
+)
+knight_score = 0
 
+while True:
+    max_score = 0
+    knight_position =[]
 
+    for row in range(size):
+        for col in range(size):
+            if matrix[row][col] == "K":
+                score = 0
+                for move in moves:
+                    pos_row = row + move[0]
+                    pos_col = col + move[1]
+                    if 0 <= pos_row < size and 0 <= pos_col < size:
+                        if matrix[pos_row][pos_col] == "K":
+                            score += 1
+                if score > max_score:
+                    knight_position = [row, col]
+                    max_score = score
+    if knight_position:
+        r, c = knight_position
+        matrix[r][c] = "0"
+        knight_score += 1
+    else:
+        break
 
-
-
+print(knight_score)
 
 
 
