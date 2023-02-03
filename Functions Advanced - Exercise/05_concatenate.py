@@ -1,22 +1,19 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 def concatenate(*args, **kwargs):
-    text = ''.join(args)
+    args_concat = "".join(args)
+    for k, v in kwargs.items():
+        if k in args_concat:
+            args_concat = args_concat.replace(k, v)
 
-    for key in kwargs:
-        text = text.replace(key, kwargs[key])
+    return args_concat
 
-    return text
+
+print(concatenate("Soft", "UNI", "Is", "Grate", "!", UNI="Uni", Grate="Great"))
+
+#
+# def concatenate(*args, **kwargs):
+#     text = ''.join(args)
+#
+#     for key in kwargs:
+#         text = text.replace(key, kwargs[key])
+#
+#     return text
