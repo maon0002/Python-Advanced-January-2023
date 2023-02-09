@@ -1,7 +1,7 @@
 import re
 import pyperclip
 
-text = '''          11. Math Operations (not included in final score)
+text = '''          Directory Traversal
 
 
 
