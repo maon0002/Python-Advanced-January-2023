@@ -28,7 +28,7 @@ while bomb_casing and bomb_effect:
         bomb_effect.appendleft(current_effect)
 
 ordered_bombs = sorted(bombs_dict.items(), key= lambda x: x[1])
-print(ordered_bombs)
+# print(ordered_bombs)
 print("Bene! You have successfully filled the bomb pouch!") if is_fulfilled else print("You don't have enough materials to fill the bomb pouch.")
 print(f"Bomb Effects: {', '.join(str(x) for x in bomb_effect)}") if bomb_effect else print(f"Bomb Effects: empty")
 print(f"Bomb Casings: {', '.join(str(x) for x in bomb_casing)}") if bomb_casing else print(f"Bomb Casings: empty")
