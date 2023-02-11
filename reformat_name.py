@@ -1,7 +1,7 @@
 import re
 import pyperclip
 
-text = '''          Problem 3 - flights
+text = '''          Problem 2 - Collecting Coins
 
 
 
