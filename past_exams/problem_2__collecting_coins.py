@@ -15,7 +15,7 @@ for row in range(size):
             field[row][col] = 0
         elif el == WALL:
             walls_positions.append([row, col])
-print(field)
+# print(field)
 directions_dict = {
     'up': (-1, 0),  # up
     'down': (1, 0),  # down
@@ -23,8 +23,8 @@ directions_dict = {
     'left': (0, -1),  # left
 }
 
-print(player_position)
-print(walls_positions)
+# print(player_position)
+# print(walls_positions)
 coins = 0
 hits_wall = False
 
@@ -51,6 +51,7 @@ while not hits_wall and coins <= 100:
     curr_pos = field[r][c]
     if curr_pos == WALL:
         hits_wall = True
+        path.append([r, c])
         break
     elif curr_pos > 0:
         coins += curr_pos
@@ -61,5 +62,12 @@ while not hits_wall and coins <= 100:
         path.append([r, c])
     player_position[0] = [r, c]
 
-print(coins)
-print(*path)
+# print(coins)
+# print(*path)
+if coins > 99:
+    print(f"You won! You've collected {coins} coins.")
+else:
+    print(f"Game over! You've collected {int(coins * 0.5)} coins.")
+
+print("Your path:")
+print(*path, sep="\n")
