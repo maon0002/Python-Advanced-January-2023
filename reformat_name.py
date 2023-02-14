@@ -1,7 +1,7 @@
 import re
 import pyperclip
 
-text = '''          03. Song Creator
+text = '''          03. Words Sorting
 
 
 

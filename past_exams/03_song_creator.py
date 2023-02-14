@@ -1,19 +1,25 @@
 def add_songs(*args):
-    titles = set(f"- {x[0]}" for x in args)
-    # print(songs_dict)
-    songs_dict = dict()
-    for item in args:
-        title = f"- {args[0]}"
-        lyr = f"{args[1]}"
+    # print(args)
+    songs_dict = {}
+    for i in range(len(args)):
+        pair = args[i]
+        title = pair[0]
+        lyr = pair[1]
         if title not in songs_dict.keys():
-            songs_dict[title] = ""
-        songs_dict[title] += lyr
+            songs_dict[title] = []
+        songs_dict[title].append(lyr)
+    # print(songs_dict)
+    final_list = []
+    for x, y in songs_dict.items():
+        title_to_append = f"- {x}"
+        final_list.append(title_to_append)
+        for line in y:
+            if line:
+                for l in line:
+                    line_to_append = f"{l}"
+                    final_list.append(line_to_append)
 
-    print(songs_dict)
-
-
-
-    # return "\n".join(final_list)
+    return "\n".join(final_list)
 
 
 #
@@ -53,29 +59,3 @@ print(add_songs(
     ("Dream On",
      ["Every time that I look in the mirror"]),
 ))
-
-
-
-#
-# def add_songs(*args):
-#     titles_tuple = list(x[0] for x in args)
-#     print(titles_tuple)
-#     final_list = []
-#     titles = []
-#
-#     for i in range(len(args)):
-#         title = args[i][0]
-#         lyrics = args[i][1]
-#         title_to_append = f"- {title}"
-#
-#         if title_to_append not in titles:
-#             final_list.append(title_to_append)
-#             titles.append(title_to_append)
-#         else:
-#             for line in lyrics:
-#                 line_to_append = f"{line}"
-#                 final_list.append(line_to_append)
-#
-#
-#
-#     return "\n".join(final_list)
